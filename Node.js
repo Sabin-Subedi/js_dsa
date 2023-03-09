@@ -6,7 +6,7 @@ class Node {
   }
 
   setNextNode(node) {
-    if (node instanceof Node) {
+    if (node instanceof Node || node === null) {
       this.next = node;
     } else {
       throw Error("Next node must me an instance of a Node class. ");
@@ -14,14 +14,14 @@ class Node {
   }
 
   setPreviousNode(node) {
-    if (node instanceof Node) {
+    if (node instanceof Node || node === null) {
       this.previous = node;
     } else {
       throw Error("Next node must me an instance of a Node class. ");
     }
   }
 
-  getNextNode(node) {
+  getNextNode() {
     return this.next;
   }
 
