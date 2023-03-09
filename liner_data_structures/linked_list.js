@@ -1,4 +1,4 @@
-import Node from "../Node";
+import Node from "../Node.js";
 
 class LinkedList {
   constructor() {
@@ -27,14 +27,23 @@ class LinkedList {
     }
   }
 
+  removeHead() {
+    let removedHead = this.head;
+    if (!removedHead) {
+      return;
+    }
+    this.head = removedHead.getNextNode();
+  }
+
   printList() {
-    let output = "<head> -> ";
+    let output = "<head>";
     let currentHead = this.head;
     while (currentHead !== null) {
       output += ` -> ${currentHead.data} `;
       currentHead = currentHead.getNextNode();
     }
     output += "<tail>";
+    console.log(output);
   }
 }
 
