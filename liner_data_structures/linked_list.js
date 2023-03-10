@@ -33,6 +33,7 @@ class LinkedList {
       return;
     }
     this.head = removedHead.getNextNode();
+    return removedHead.data;
   }
 
   printList() {
