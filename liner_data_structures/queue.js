@@ -21,9 +21,6 @@ class Queue {
     }
     this.queue.addToTail(data);
     this.size++;
-    console.log(
-      `Enqueued ${data} into the queue. Current Queue Size: ${this.size}`
-    );
   }
 
   dequeue() {
@@ -34,11 +31,8 @@ class Queue {
 
     this.size--;
 
-    console.log(
-      `Dequeued ${data} from the queue. Current Queue Size: ${this.size}`
-    );
+    return data;
   }
 }
 
-
-export default Queue
+export default Queue;
